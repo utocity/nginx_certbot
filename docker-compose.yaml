@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  nginx:
+    image: nginx
+    restart: always
+    ports:
+      - 45.32.176.202:80:80
+    volumes:
+      - ./etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./var/www/letsencrypt:/var/www/letsencrypt
